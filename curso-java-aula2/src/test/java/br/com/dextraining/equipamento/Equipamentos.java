@@ -10,6 +10,6 @@ public class Equipamentos {
 		Televisao televisao = new Televisao(100.0,"LG",50);
 		double resultado = televisao.calculaPreco();
 		
-		Assert.assertEquals(Double.valueOf(resultado), Double.valueOf(100));
+		Assert.assertEquals(Double.valueOf(110.0),Double.valueOf(resultado));
 	}
 }
