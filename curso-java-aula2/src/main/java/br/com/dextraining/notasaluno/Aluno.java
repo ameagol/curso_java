@@ -2,8 +2,8 @@ package br.com.dextraining.notasaluno;
 
 public class Aluno {
 
-	String nome;
-	double notas[];
+	private String nome;
+	private double notas[];
 	
 	public Aluno(String nome){
 		this.nome = nome;
@@ -18,5 +18,21 @@ public class Aluno {
 		}
 		
 		return media / 3;
+	}
+	
+	public String getNome(){
+		return nome;
+	}
+	
+	public void setNome(String nome){
+		this.nome = nome;
+	}
+
+	public double[] getNotas() {
+		return notas;
+	}
+
+	public void setNotas(double[] notas) {
+		this.notas = notas;
 	}
 }

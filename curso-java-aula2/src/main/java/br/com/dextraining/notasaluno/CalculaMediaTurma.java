@@ -18,23 +18,28 @@ public class CalculaMediaTurma {
 			
 			Aluno aluno = new Aluno(scanner.next());
 			alunos[indiceAtual] = aluno;
+			double notas[] = new double[3];
 			
 			for(int indiceNota = 0;indiceNota < 3;indiceNota++){
 				
 				System.out.println("Digite a "+ indiceNota +" Nota");
+				notas[indiceNota] = scanner.nextDouble();
 				
-				aluno.notas[indiceNota] = scanner.nextInt();
+				
+				//aluno.notas[indiceNota] = scanner.nextInt();
 				
 			}
+			
+			alunos[indiceAtual].setNotas(notas);
 			
 		}
 		
 		for(int i = 0;i < alunos.length; i++){
-			System.out.print("Aluno:" + alunos[i].nome + " Notas: ");
+			System.out.print("Aluno:" + alunos[i].getNome() + " Notas: ");
 					
-			for(int j = 0; j < alunos[i].notas.length ; j++){
+			for(int j = 0; j < alunos[i].getNotas().length ; j++){
 				
-				System.out.print(alunos[i].notas[j] + " ");
+				System.out.print(alunos[i].getNotas()[j] + " ");
 			}
 			
 			System.out.println( " Media:" + alunos[i].getMedia());
@@ -47,3 +52,6 @@ public class CalculaMediaTurma {
 	}
 
 }
+
+
+
